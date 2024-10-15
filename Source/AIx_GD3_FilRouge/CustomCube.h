@@ -20,6 +20,7 @@ public:
 	UMaterialInstance* Material;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* CubeMesh;
+	bool TomTom;
 	// Called every frame
 	
 
