@@ -5,8 +5,9 @@
 #include "CoreMinimal.h"
 #include "BP_PlayerFSM.h"
 #include "UObject/NoExportTypes.h"
-#include "Parent_State.generated.h"
 #include "BP_PlayerFSM.h"
+#include "Parent_State.generated.h"
+
 
 /**
  * 
