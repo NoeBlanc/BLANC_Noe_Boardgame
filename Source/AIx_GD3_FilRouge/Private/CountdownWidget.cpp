@@ -1,6 +1,7 @@
 #include "CountdownWidget.h"
 #include "Components/TextBlock.h"
 #include "TimerManager.h"
+#include "Kismet/GameplayStatics.h"
 
 void UCountdownWidget::NativeConstruct()
 {
@@ -55,7 +56,14 @@ void UCountdownWidget::EndCountdown()
 	// Logique lorsque le timer est terminé
 	if (CountdownText)
 	{
-		CountdownText->SetText(FText::FromString(TEXT("Time's Up!")));
+		// Vérifiez que vous voulez charger un niveau spécifique
+		FString NextLevelName = "Test_map";
+
+		// Change de niveau
+		if (!NextLevelName.IsEmpty())
+		{
+			UGameplayStatics::OpenLevel(this, FName(*NextLevelName));
+		}
 	}
 
 	UE_LOG(LogTemp, Warning, TEXT("Le compte à rebours est terminé."));
