@@ -17,7 +17,7 @@ class AIX_GD3_FILROUGE_API UCountdownWidget : public UUserWidget
 public:
 	// Fonction pour démarrer le timer
 	UFUNCTION(BlueprintCallable, Category = "Countdown")
-	void StartCountdown(float InitialTime);
+	void StartCountdown(float InitialTime = 30.0f);
 
 protected:
 	virtual void NativeConstruct() override;
